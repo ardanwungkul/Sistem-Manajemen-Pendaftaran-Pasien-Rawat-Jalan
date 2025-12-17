@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.bg-auth {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1280 720'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1344%26quot%3b)' fill='none'%3e%3crect width='100%' height='100%' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1345%26quot%3b)'%3e%3c/rect%3e%3cpath d='M0 0L350.77 0L0 70.32z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 70.32L350.77 0L406.46 0L0 251.01999999999998z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 251.01999999999998L406.46 0L451.89 0L0 540.55z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 540.55L451.89 0L889.29 0L0 633.4599999999999z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1280 720L663.67 720L1280 696.26z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1280 696.26L663.67 720L314.58 720L1280 500.62z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1280 500.62L314.5799999999999 720L154.26999999999992 720L1280 260.6z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1280 260.6L154.26999999999998 720L137.07999999999998 720L1280 218.81000000000003z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1344'%3e%3crect width='100%' height='100%' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='89.06%25' y1='119.44%25' x2='10.94%25' y2='-19.44%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1345'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(212%2c 237%2c 255%2c 1)' offset='0.02'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+@layer utilities {
+    input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+        box-shadow: unset !important;
+        -webkit-box-shadow: unset !important;
+        -webkit-text-fill-color: unset !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+.dt-search {
+    position: absolute !important;
+    top: -50px;
+    overflow: visible;
+    right: 0;
+    /* z-index: 10 !important; */
+    margin-bottom: 0px !important;
+}
+@media only screen and (max-width: 768px) {
+    .dt-input,
+    .dt-search {
+        width: 100%;
+    }
+    .dt-buttons {
+        top: -90px !important;
+    }
+}
+
+#datatable_wrapper {
+    position: unset;
+}
+div.dt-container {
+    position: unset !important;
+}
+.dt-layout-row {
+    margin: 0 !important;
+}
+div.dt-container.dt-empty-footer tbody > tr:last-child > * {
+    border-bottom: 0 !important;
+}
+.dt-input {
+    font-size: 12px !important;
+    border-radius: 0.5rem !important;
+}
+
+.dt-layout-cell.dt-layout-end:has(.dt-paging) {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+
+    position: absolute !important;
+    bottom: 0px;
+    overflow: visible;
+    left: 0;
+    /* z-index: 10 !important; */
+    margin-bottom: 0px !important;
+
+    padding: 5px 10px;
+    border: 1px solid #0000001a !important;
+    border-radius: 8px !important;
+    background-color: #f3f4f6 !important;
+    width: 100%;
+
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+        0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.dt-paging-button {
+    border-radius: 8px !important;
+}
+div.dt-container .dt-paging .dt-paging-button:hover {
+    background: linear-gradient(to bottom, #eee 0%, #eee 100%) !important;
+    border: 1px solid gray !important;
+}
+div.dt-container .dt-paging .dt-paging-button.current,
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+    background: linear-gradient(to bottom, white 0%, white 100%) !important;
+}
+
+table.dataTable > tbody > tr:nth-child(even) > *,
+table.dataTable.display > tbody > tr:nth-child(even) > * {
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.023);
+    box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-stripe), 0.04) !important;
+}
+
+.dtr-details {
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid gray;
+    padding: 5px !important;
+    border-radius: 8px;
+}
+tr.child td.child table {
+    width: 100% !important;
+}
+div.dt-container .dt-search input {
+    margin-left: 0 !important;
+}
+.select2-container--default .select2-selection--single {
+    border-radius: 8px !important;
+    border: 1px solid #d1d5db !important;
+    height: 37.33px !important;
+    /* padding: 8px 12px !important; */
+
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+        0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.select2-dropdown {
+    overflow: hidden !important;
+    border-radius: 8px !important;
+    /* margin-top: 3px !important; */
+}
+.select2-results__options::-webkit-scrollbar {
+    display: none !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+    border-top: 1px solid gray !important;
+}
+.select2-container--open .select2-dropdown--above {
+    border-bottom: 1px solid gray !important;
+}
+.select2-search__field {
+    border-radius: 8px !important;
+}
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: 36px !important;
+}
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    top: 3px !important;
+}
+.select2-selection.required {
+    background-color: yellow !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+.dt-empty {
+    font-size: 12px;
+}
