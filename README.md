@@ -10,7 +10,7 @@ Aplikasi **Sistem Manajemen Pendaftaran Pasien Rawat Jalan** adalah aplikasi ber
 - Pendaftaran pasien rawat jalan
 - Manajemen poli dan dokter
 - Pencatatan kunjungan pasien
-- Autentikasi pengguna (Admin / Petugas)
+- Autentikasi pengguna
 
 ---
 
